@@ -8,7 +8,7 @@ window.onscroll = function() {
         document.querySelector('.navbar').style.top = '0';
     }
     else{
-        document.querySelector('.navbar').style.top = '-100px';
+        document.querySelector('.navbar').style.top = '-130px';
     }
     ubicacionPrincipal = Desplazamiento_Actual;
 }

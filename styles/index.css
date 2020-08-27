@@ -32,8 +32,15 @@ p{
     font-size: 1.2rem;
     line-height: 2rem;
 }
+.logo-img{
+    height: 100px;
+    /* width: 40px; */
+    padding:0;
+    margin:0;
+}
 /*nav*/
 .navbar{
+    padding:0;
     width: 100%;
     z-index: 1;
     background-color: white !important;
@@ -173,5 +180,17 @@ p{
         border-radius: 10px;
         box-shadow: 2px 2px 7px 6px #e1e1e1;
         padding: 1rem;
+    }
+}
+@media(max-width:720px){
+    .contenido{
+        top:50%
+    }
+    .titulo{
+        color:#323232;
+    }
+    .subtitulo{
+        color:#323232;
+
     }
 }
