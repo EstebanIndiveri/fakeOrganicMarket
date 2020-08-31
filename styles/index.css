@@ -6,6 +6,22 @@
     --secundario: #44b3c2;
     --claro: #ffffff;
 }
+html {
+    scroll-behavior: smooth;
+  }
+    ::-webkit-scrollbar {
+        width: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: none;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3e97a3;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--secundario);
+      }
 
 body {
     font-family: var(--fuentePrincipal);
@@ -81,24 +97,37 @@ p{
     transform: rotate(90deg) !important;
 }
 
+.navbar-nav,
+.mr-auto {
+flex: 1;
+margin: auto !important;
+display: flex;
+justify-content: flex-end;
+}
+.mr-auto li{
+    margin:0 3rem;
+}
+
 /*encabezado*/
 .hero{
     background-image:url(../assets/fondito.png);
     height: 91vh;
     background-repeat: no-repeat;
-    /* background-size: contain; */
+    background-size: contain;
     background-position: right;
-    background-attachment: fixed;
 }
-/* .hero:before {
-	content:'';
-	position: absolute;
-        top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(0,0,0,0.6);
-} */
+@media(max-width:1200px){
+    .hero{
+        background-size:auto;
+    }
+}
+@media(max-width:768px){
+    .hero{
+        background-position:top;
+
+    }
+}
+
 .hero .contenedor{
     display:grid;
     align-content: center;
@@ -180,17 +209,18 @@ p{
         border-radius: 10px;
         box-shadow: 2px 2px 7px 6px #e1e1e1;
         padding: 1rem;
+        transition:all .3s ease-in-out;
+    }
+    .servicio:hover{
+        box-shadow: 1px 1px 30px 1px #adadad;
+        transform: scale(1.01);
+        cursor: pointer;
     }
 }
-@media(max-width:720px){
+@media(max-width:780px){
     .contenido{
         top:50%
     }
-    .titulo{
-        color:#323232;
-    }
-    .subtitulo{
-        color:#323232;
-
-    }
 }
+
+/*end services*/
