@@ -6,13 +6,21 @@ let ubicacionPrincipal  = window.pageYOffset;
 window.onscroll = function() {
     let Desplazamiento_Actual = window.pageYOffset;
     if(ubicacionPrincipal >= Desplazamiento_Actual){
-        document.querySelector('.navbar').style.top = '0';
+        document.querySelector('.navbar').style.top = '0';    
+
+        setTimeout(() => {
+            let whatsapp=document.querySelector('.whatsapp');
+            whatsapp.style.left='0';
+            whatsapp.classList.add('whatsappShow')
+        }, 600);
     }
     else{
         document.querySelector('.navbar').style.top = '-130px';
+        document.querySelector('.whatsapp').style.left='-400px';
     }
     ubicacionPrincipal = Desplazamiento_Actual;
 }
+
 /**
  * Rotate nav
  */

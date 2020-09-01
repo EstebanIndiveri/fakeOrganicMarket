@@ -49,7 +49,7 @@ p{
     line-height: 2rem;
 }
 .logo-img{
-    height: 100px;
+    max-height: 80px;
     /* width: 40px; */
     padding:0;
     margin:0;
@@ -60,6 +60,7 @@ p{
     width: 100%;
     z-index: 1;
     background-color: white !important;
+    padding-bottom: 0;
     transition: top 0.5s;
     box-shadow: 2px 2px 10px -5px #c99ab1;
 }
@@ -205,7 +206,7 @@ animation-iteration-count: infinite;
 /*services*/
 .servicios{
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 5rem;
 }
 
 .servicios h2{
@@ -254,3 +255,154 @@ animation-iteration-count: infinite;
 }
 
 /*end services*/
+
+/*                     our products
+
+                    <Content Home>
+*/
+.titleStart{
+    text-align: center;
+    font-size: 3rem;
+    margin: 5rem 0;
+}
+.textoInicio{
+    padding-top:4rem;
+    max-width:1200px;
+    width:88%;
+    margin:0 auto;
+}
+@media(min-width:768px){
+    .textoInicio{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    column-gap:3rem;
+    }
+}
+.indexParagraph{
+        margin:auto;
+        font-size:1.1rem;
+        line-height:1.8;
+        text-align:justify;
+}
+.initImage{
+    max-height:90%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 6px #c2c2c2;
+    transition:transform .6s ease-in-out;
+}
+.initImage:hover{
+    transform:scale(1.06);
+}
+
+/*                                               ---Gallery---        */
+/*custon section*/
+.sectionQuickProducts{
+    padding:5rem 0;
+    width:90vw;
+    margin:0 auto
+}
+
+.titleProducts{
+    text-align:center;
+}
+
+.titleProducts .message{
+    font-size: 1.3rem;
+    letter-spacing: '0.3rem';
+}
+
+.titleProducts .title{
+    letter-spacing: '0.3rem';
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.titleProducts .underline{
+    width: 5rem;
+    height: 0.2rem;
+    background:var(--primario);
+    margin:0.5rem auto;
+}
+
+.galleryContainer{
+    /* padding-top: 5rem; */
+    height: 100vh;
+}
+.galleryDiv{
+display:grid;
+grid-template-columns:auto;
+grid-row-gap:1rem;
+}
+.item{
+    position:relative;
+}
+.info{
+    position:absolute;
+    top:0;
+    left:0;
+    background:var(--primario);
+    color:#323232;
+    opacity: .8;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding:0.1rem 0.3rem;
+    text-transform:capitalize;
+}
+@media(min-width:576px){
+    .galleryDiv{
+    grid-template-columns:1fr 1fr;
+    grid-column-gap:1rem;
+    }
+}
+@media(min-width:768px){
+    .galleryDiv{
+    grid-template-columns:repeat(3,1fr);
+    }
+}
+@media(min-width:992px){
+    .gatsby-image-wrapper{
+        max-height:100%;
+    }
+    .galleryDiv{
+    grid-template-areas:'one one two two' 'one one three three';
+    }
+    .item-1{
+        grid-area:one;
+    }
+    .item-1 .gatsby-image-wrapper{
+        max-height: 533px;
+        /* max-height: 447px; */
+    }
+    .item-2{
+        grid-area:two;
+    }
+    .item-3{
+        grid-area:three;
+    }
+}
+
+.whatsapp{
+    color:white !important;
+    /* background-color: green; */
+    border:none;
+    width: 50px;
+  height: 50px;
+  background: #25D366;
+  border-radius: 1000px;
+  transition: all 0.5s;
+  /* box-shadow: 2px 2px 10px 1px #9b9b9b; */
+    font-size: 2rem;
+}
+.whatsapp a{
+    text-decoration: none;
+    color:white !important;
+    outline: none;
+}
+.whatsapp:hover{
+  box-shadow: 2px 2px 10px 1px #9b9b9b;
+    
+}
+.whatsapp .show{
+    transition: all 0.5s;
+
+}
