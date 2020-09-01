@@ -126,6 +126,9 @@ animation-duration: 500s;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
 }
+.animationOut{
+    animation-name:none !important;
+}
 
 @keyframes MOVE-BG {
     from {
@@ -326,7 +329,7 @@ animation-iteration-count: infinite;
 
 .galleryContainer{
     /* padding-top: 5rem; */
-    height: 100vh;
+    /* height: 100vh; */
 }
 .galleryDiv{
 display:grid;
@@ -413,21 +416,73 @@ grid-row-gap:1rem;
 }
 
 /*section little TASTE?*/
+.productWrapper{
+    
+}
+@media(min-width:576px){
+    .productWrapper{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    grid-column-gap:1rem;
+    }
+}
+.productWrapper .image{
+        border-radius:0.5rem;
+        max-width: 70%;
+        box-shadow:1px 1px 8px 6px #e1e1e1;
+}
 
+.productWrapper .product-content{
+    display:flex;
+    justify-content:space-between;
+    text-transform:uppercase;
+}
+.productWrapper .name{
+    color:var(--primario);
+    margin-top:0.5rem;
+}
+.productWrapper .price{
+    color:var(--primario);
+    margin-top:0.5rem;
+}
+.productWrapper .info{
+    margin-top:0.5rem;
+    word-spacing:0.2rem;
+    text-transform:lowercase;
+}
+
+.productList{
+    margin:3rem 0;
+display:grid;
+grid-template-columns:100%;
+grid-row-gap:3rem;
+}
+@media(min-width:576px){
+    .productList{
+        grid-template-columns:95%;
+    }
+}
+@media(min-width:776px){
+    .productList{
+        grid-template-columns:80%;
+    justify-content:center;
+    }
+}
+@media(min-width:992px){
+    .productList{
+        grid-template-columns:1fr 1fr;
+        grid-gap:2rem;
+    }
+}
 /**/
 
 /*FOOTER*/
 .footer{
-    /* background-image: url('https://images.unsplash.com/photo-1552166539-7f3691985d0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
-    background-color: #332818;
-    background: linear-gradient(90deg, rgba(51,40,24,1) 29%, rgba(110,94,74,1) 64%, rgba(241,169,78,1) 100%);
+    color:black;
+    box-shadow: 1px 1px 10px 2px #e1e1e1;
 
-    /* clear: both; */
-    color:white;
     padding: 2rem 0;
+    padding-bottom: 0;
 }
 @media(min-width:768px){
     .footer .contenedor{
@@ -442,7 +497,7 @@ grid-row-gap:1rem;
     }
 }
 .contenedor a{
-color:white;
+color:black;
 font-size: 2rem;
 text-align: center;
 transition:color .3s ease-in-out;
