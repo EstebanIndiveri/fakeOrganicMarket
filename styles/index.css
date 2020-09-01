@@ -119,6 +119,22 @@ justify-content: flex-end;
     /* background-position:  right; */
     /* background-attachment: fixed; */
 }
+.hero:hover{
+animation-name: MOVE-BG;
+animation-duration: 500s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+@keyframes MOVE-BG {
+    from {
+      transform: translateY(0);
+    }
+    to { 
+      transform: translateY(-100%);
+    }
+ }
+
 @media(max-width:1200px){
     .hero{
         background-position-x: right;
