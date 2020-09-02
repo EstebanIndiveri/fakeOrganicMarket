@@ -123,8 +123,18 @@ justify-content: flex-end;
 .mr-auto li{
     margin:0 3rem;
 }
+.openlist li{
+    margin:0 !important;
+}
+
+.active{
+    text-decoration:underline;
+}
 
 /*encabezado*/
+
+
+
 .hero{
     background-image:url(../assets/alternative.png);
     height: 91vh;
@@ -135,6 +145,13 @@ justify-content: flex-end;
     /* background-position:  right; */
     /* background-attachment: fixed; */
 }
+@media(min-width:565px)and (max-width:970px){
+    .hero{
+        background-size: 400px;
+        background-position-y: center;
+    }
+}
+
 .hero:hover{
 animation-name: MOVE-BG;
 animation-duration: 500s;
@@ -161,13 +178,15 @@ animation-iteration-count: infinite;
         /* background-size: 500px; */
         /* background-position: right; */
         /* background-size: auto; */
-        background-position-y: top;
+
+        /* background-position-y: top; */
 
     }
 }
 @media(max-width:768px){
     .hero{
         background-position-y: top;
+        background-position-x: center;
         /* background-position: top 2cm right; */
         /* background-size: contain; */
 
@@ -190,7 +209,7 @@ animation-iteration-count: infinite;
 /*custon hero headline*/
 .titulo{
     margin:0;
-
+font-size: 4rem;
 }
 
 .subtitulo{
@@ -352,10 +371,10 @@ animation-iteration-count: infinite;
     margin:0.5rem auto;
 }
 
-.galleryContainer{
+/* .galleryContainer{
     /* padding-top: 5rem; */
-    /* height: 100vh; */
-}
+    /* height: 100vh; 
+} */
 .galleryDiv{
 display:grid;
 grid-template-columns:auto;
@@ -446,9 +465,9 @@ grid-row-gap:1rem;
 }
 
 /*section little TASTE?*/
-.productWrapper{
+/* .productWrapper{
     
-}
+} */
 @media(min-width:576px){
     .productWrapper{
     display:grid;
@@ -564,11 +583,20 @@ grid-row-gap:3rem;
 
     }
 }
-.contenedor a{
+.widget h3{
+    font-weight: 800 ;
+    text-decoration: underline;
+}
+.widget a{
 color:black;
 font-size: 2rem;
 text-align: center;
 transition:color .3s ease-in-out;
+margin:0 2rem;
+}
+.widget p img{
+height: 100px;
+cursor: pointer;
 }
 .contenedor a:hover{
     color:var(--primario);

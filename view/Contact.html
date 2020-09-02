@@ -10,10 +10,16 @@
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/fontawesome-all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=PT+Sans&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="../styles/contactUs.css">
+    <title>Health Store - Home</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark d-flex justify-content-between" style="color:#44b3c2">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-dark d-flex justify-content-between animate__animated animate__bounceInDown animate__slow" style="color:#44b3c2">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
           <img class="logo-img" src="../assets/logo.png" alt="">
@@ -24,17 +30,17 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link active" id="index" aria-current="page" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./aboutUs.html">About Us</a>
+                <a class="nav-link" id="aboutUs" href="#mision">About Us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                   Our Work
                 </a>
                 <ul class="dropdown-menu openlist" style="background-color: black;" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#!">Projects</a></li>
+                  <li><a class="dropdown-item" href="#!">Farm</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#!">Experience</a></li>
                   <li><hr class="dropdown-divider"></li>
@@ -42,10 +48,75 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./Contact.html">Contact Us</a>
+                <a id="contactUs" class="nav-link" href="./contact.html">Contact Us</a>
               </li>
-
             </ul>
           </div>
         </div>
       </nav>
+
+      <div class="container d-flex">
+      <div class="row" style="height:100vh">
+      <div style="margin-top: 5rem;" class="col-6">
+
+      <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input id="inputForm" type="email" class="form-control" id="exampleInputEmail1" required aria-describedby="emailHelp" placeholder="Enter email">
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Your Message</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="your message here!" rows="3"></textarea>
+        </div>
+        
+        <button id="btnSubmit" type="submit" class="btn btn-primary" >Submit</button>
+      </form>
+
+
+    </div>
+    
+    <div class="col-6 text-center" style="margin-top:5rem;margin: 5rem auto 0 auto">
+    <div>
+      <h3 class="titleContact">Other ways of Contact</h3>
+      <p>Tel: 3512694707</p>
+      <p>Email: esteban.indiveri@gmail.com</p>
+      <p>Córdoba, Argentina</p>
+
+
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+      <footer class="footer">
+        <div class="contenedor">
+            <div class="widget">
+                <h3>Contacto</h3>
+                <p>Tel:3512694707</p>
+                <p>Córdoba, Argentina</p>
+                <p>esteban.indiveri@gmail.com</p>
+            </div>
+            <div class="widget">
+                <h3>Quick Info</h3>
+                <p>we are a company dedicated to healthy eating and delivering the best for our customers</p>
+            </div>
+            <div class="widget">
+              <div class="widget text-center d-flex justify-content-center">
+                <a href="#!"><i class="fab fa-whatsapp"></i></a>
+                <a href="#!"><i class="fab fa-instagram"></i></a>
+                <a href="#!"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <p class="text-center"><a id="logoFooter" href="./index.html"><img src="../assets/logo.png"></a></p>
+          </div>
+        </div>
+        <!-- <p class="text-center pb-0 pt-0 mb-0 mt-0">Copyright © 2020</p> -->
+    </footer>
+  
+    <button class="whatsapp animate__animated animate__flipInY" style="position: fixed;bottom: 10px;"><a href="https://wa.link/9ymxt0"><i class="fab fa-whatsapp"></i></a></button>
+      <script src="../js/app.js"></script>
+      
+  </body>
+  </html>

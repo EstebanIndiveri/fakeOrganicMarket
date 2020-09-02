@@ -1,0 +1,43 @@
+:root {
+    --fuentePrincipal:  'Montserrat', sans-serif;
+    --fuenteSecundaria: 'PT Sans', sans-serif;
+
+    /* --primario: #f1a94e; */
+    --primario:rgb(210, 170, 92);
+    --secundario: #44b3c2;
+    --claro: #ffffff;
+}
+
+.form-group{
+    padding-bottom: 1rem;
+}
+.form-group input:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: rgb(226, 186, 107);;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem var(--primario);
+}
+.form-control:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: rgb(226, 186, 107);;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem var(--primario);
+}
+#btnSubmit{
+    background-color:var(--primario);
+    border:none;
+}
+#btnSubmit:focus{
+    box-shadow: none;
+    outline: none;
+}
+#btnSubmit:hover{
+    background-color: rgb(226, 186, 107);
+}
+.titleContact{
+    color:var(--secundario);
+    font-weight: 800;
+    font-size: 1.3rem;
+}

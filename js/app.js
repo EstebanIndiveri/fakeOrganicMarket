@@ -3,8 +3,11 @@ document.addEventListener('DOMContentLoaded',()=>{
 let ubicacionPrincipal  = window.pageYOffset;
 
 setTimeout(() => {
+if(document.querySelector('.hero')==null)return;
+
     document.querySelector('.hero').classList.remove('animate__animated', 'animate__fadeIn','animate__slow')
 }, 300);
+
 
 let UrlActual = window.location;
 let exathpath=UrlActual.pathname;
@@ -12,13 +15,26 @@ let exathFilter=exathpath.split('/').slice();
 exathFilter.find((element=>{
     if(element==='index.html'){
         let separateEl=element.split('.');
-        console.log(separateEl[0]);
+        // console.log(separateEl[0]);
         document.getElementById("index").href = "#!";
+
+        document.getElementById("logoFooter").href = "#!";
+
         document.getElementById('index').addEventListener('click',()=>{
         document.querySelector('.hero').classList.add('animationOut');
             scroll('#start');
         })
-    }
+        document.getElementById('logoFooter').addEventListener('click',()=>{
+            document.querySelector('.hero').classList.add('animationOut');
+            scroll('#start');
+        })
+        document.getElementById('index').classList.add('active');
+    }else{
+        document.getElementById('index').classList.remove('active');
+    };
+    if(element==='contact.html'){
+        document.getElementById('contactUs').classList.add('active');
+    };
     return;
 }))
 
@@ -77,7 +93,6 @@ window.onload=function(){
             cosito.classList.add('rotate');
         }
     }
-    
 }
 
 
@@ -85,26 +100,24 @@ window.onload=function(){
 const imgHero=document.querySelector('.hero');
     let i=0;
     let tiempo=0
-
     const imagenes=['fondo.png','alternative.png'];
-
     setInterval(() => {
-        // imgHero.style.backgroundPositionY='-'+tiempo+'px';
         if(tiempo>60){
             tiempo=0;
+            if(document.querySelector('.hero')==null)return;
+
             imgHero.style.backgroundImage='url(../assets/'+imagenes[i]+')';
             if(i===imagenes.length - 1){
                 i=0;
+                if(document.querySelector('.hero')==null)return;
                 imgHero.classList.remove('animate__animated');
-
             }
             else{
                 i++
+                if(document.querySelector('.hero')==null)return;
                 imgHero.classList.remove('animate__animated');
             }
-
         }
         tiempo++;
-        // imgHero.classList.remove('animate__animated','animate__fadeIn');
     }, 100);
 });
