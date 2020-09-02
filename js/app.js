@@ -13,7 +13,7 @@ let UrlActual = window.location;
 let exathpath=UrlActual.pathname;
 let exathFilter=exathpath.split('/').slice();
 exathFilter.find((element=>{
-    if(element==='index.html'){
+    if(element==='index.html' || element==='/'){
         let separateEl=element.split('.');
         // console.log(separateEl[0]);
         document.getElementById("index").href = "#!";
