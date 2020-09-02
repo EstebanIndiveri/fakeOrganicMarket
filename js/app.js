@@ -31,6 +31,7 @@ exathFilter.find((element=>{
         document.getElementById('index').classList.add('active');
     }else{
         document.getElementById("index").href = "/";
+        document.getElementById("logoFooter").href = "/";
         document.getElementById('index').classList.remove('active');
     };
     if(element==='contact.html'){
