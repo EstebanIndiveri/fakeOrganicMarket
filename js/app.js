@@ -30,7 +30,7 @@ exathFilter.find((element=>{
         })
         document.getElementById('index').classList.add('active');
     }else{
-        document.getElementById("index").href = "#!";
+        document.getElementById("index").href = "../view/index.html";
         document.getElementById('index').classList.remove('active');
     };
     if(element==='contact.html'){
