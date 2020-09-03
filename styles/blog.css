@@ -1,0 +1,43 @@
+:root {
+    --fuentePrincipal:  'Montserrat', sans-serif;
+    --fuenteSecundaria: 'PT Sans', sans-serif;
+
+    /* --primario: #f1a94e; */
+    --primario:rgb(210, 170, 92);
+    --secundario: #44b3c2;
+    --claro: #ffffff;
+}
+.highTitle{
+    font-size: 3rem !important;
+}
+.titleBlog{
+    font-size: 2.3rem;
+    font-weight: 600;
+    
+   
+  transition: color .6s ease-in-out;
+}
+.titleBlog:hover{
+    color: var(--primario);
+    cursor: pointer;
+}
+.createDate{
+    color:var(--secundario);
+    padding-bottom: 2rem;
+}
+.contentEntry{
+    width: 80%;
+    margin:0 auto;
+    text-align: justify;
+}
+.contentEntry p{
+    line-height: 1.5;
+}
+
+.clean{
+    text-decoration:none !important;
+    color:white;
+}
+.clean:hover{
+    color:white;
+}
