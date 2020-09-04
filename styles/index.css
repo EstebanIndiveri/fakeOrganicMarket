@@ -7,6 +7,12 @@
     --secundario: #44b3c2;
     --claro: #ffffff;
 }
+.primary{
+    color:var(--primario);
+}
+.secondary{
+    color:var(--secundario);
+}
 html {
     scroll-behavior: smooth;
   }
