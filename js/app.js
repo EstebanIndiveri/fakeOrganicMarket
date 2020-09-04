@@ -37,6 +37,12 @@ document.addEventListener('DOMContentLoaded',()=>{
         if(element==='contact.html'){
             document.getElementById('contactUs').classList.add('active');
         };
+        if(element==='view/blog.html'){
+            document.getElementById('ourwork').classList.add('active');
+        }
+        if(element==='#mision'){
+            document.getElementById('aboutUs').classList.add('active');
+        }
         return;
     }))
     
