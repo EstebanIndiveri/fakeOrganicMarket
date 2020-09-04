@@ -1,13 +1,11 @@
 
 document.addEventListener('DOMContentLoaded',()=>{
-
-        btn=document.querySelector(".btnGame");
+	let btn=document.querySelector(".btnGame");
                 btn.addEventListener("click",()=>{
-                    // jugar_ahora();
+					jugar_ahora();
+					
                     console.log('clock');
-                    document.querySelector('.customAlert').classList.add('visibleAlert');
-                    // document.querySelector('.customAlert').innerHTML='Ingresa tu nombre para jugar';
-                });
+				});
 
 		function jugar_ahora() {
 
@@ -15,34 +13,49 @@ document.addEventListener('DOMContentLoaded',()=>{
 			var min = 1;
 			var cant_intentos = 3;
 			var acerto = false;
-			var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+			// var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+			var numero_aleatorio=3;
 			var numero;
 
 			let name=document.getElementById('nombre').value;
 
 			if(name.trim()===''){
-				alert('ingrese un nombre');
+				Swal.fire('Your name is required');
 			}else{
 				while(cant_intentos>0 && acerto!=true){
 				cant_intentos--;
-					numero=parseInt(prompt('ingrese un numero'));
-					if(numero===numero_aleatorio){
-						alert('correcto');
-						acerto=true;
-					}else if(numero<numero_aleatorio){
-						alert('pista es mayor');
-					}else if(numero>numero_aleatorio){
-						alert('es menor');
+					numero=prompt('ingrese un numero');
+					if(numero===''||numero==null ||numero == undefined || isNaN(numero)){
+						Swal.fire({
+							icon: 'error',
+							text: 'Only numbers please!',
+						  })
+						return;
 					}
-					else{
-						alert(`le quedan ${cant_intentos} intentos`);
+						if(parseInt(numero)===numero_aleatorio){
+							Swal.fire({
+								icon: 'success',
+								text: 'Congratulations you guessed the number!',
+							})
+							acerto=true;
+						}
+						else if (parseInt(numero)<numero_aleatorio){
+							alerta('es mayor');
+							console.log('mayor')
+
+						}else if (parseInt(numero)>numero_aleatorio){
+							alert("PISTA: es menor");
+						}else{
+								alert(`le quedan ${cant_intentos} intentos`);
+							}
+							
 					}
-				}
 				document.getElementById("rdo").innerHTML=`El nùmero era <b> ${numero_aleatorio}</b>`;
 			}
-
-
 		};
-		
-		
+
+		function alerta(message){
+			alert(message);
+
+		}
 });
