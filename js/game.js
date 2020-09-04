@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 			var min = 1;
 			var cant_intentos = 3;
 			var acerto = false;
-			// var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
-			var numero_aleatorio=3;
+			var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+			// var numero_aleatorio=3;
 			var numero;
 
 			let name=document.getElementById('nombre').value;
@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 							acerto=true;
 						}
 						else if (parseInt(numero)<numero_aleatorio){
-							alerta('es mayor');
-							console.log('mayor')
+							alert('es mayor');
 
 						}else if (parseInt(numero)>numero_aleatorio){
 							alert("PISTA: es menor");
@@ -54,8 +53,4 @@ document.addEventListener('DOMContentLoaded',()=>{
 			}
 		};
 
-		function alerta(message){
-			alert(message);
-
-		}
 });
