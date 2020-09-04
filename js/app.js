@@ -122,4 +122,20 @@ document.addEventListener('DOMContentLoaded',()=>{
             }
             tiempo++;
         }, 100);
+
+
+
+        /* blog day */
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+        ];
+        let date=document.querySelectorAll('#createDate');
+        var d=new Date();
+        var dias=d.getDate();
+        var mes=monthNames[d.getMonth()];
+        var anio=d.getFullYear();
+                
+        date[0].innerHTML=`${dias}th ${mes} of ${anio}`
+        date[1].innerHTML=`${dias}th ${mes} of ${anio}`
+
     });
