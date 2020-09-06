@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 							}
 							
 					}
-				document.getElementById("rdo").innerHTML=`Congratulations! <i style="color:rgb(210, 170, 92)" class="fas fa-fire"></i> <br/> The number was <b> ${numero_aleatorio}</br>`;
+				document.getElementById("rdo").innerHTML=`Try Again!! <br/>The number was <b> ${numero_aleatorio}</br>`;
 				
 			}
 		};
