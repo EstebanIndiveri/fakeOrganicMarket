@@ -19,8 +19,12 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 			let name=document.getElementById('nombre').value;
 
-			if(name.trim()===''){
-				Swal.fire('Your name is required');
+			if(name.trim()==='' || hasNumber(name)==true){
+				Swal.fire({
+					icon:'error',
+					text:'Your name is required and only letters please!'
+				});
+				
 			}else{
 				while(cant_intentos>0 && acerto!=true){
 				cant_intentos--;
@@ -67,5 +71,9 @@ document.addEventListener('DOMContentLoaded',()=>{
 				
 			}
 		};
+
+		function hasNumber(myString) {
+			return /\d/.test(myString);
+		  }
 
 });
