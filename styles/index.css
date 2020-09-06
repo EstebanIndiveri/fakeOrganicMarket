@@ -13,6 +13,9 @@
 .secondary{
     color:var(--secundario);
 }
+#audio{
+    display: none;
+}
 html {
     scroll-behavior: smooth;
   }
