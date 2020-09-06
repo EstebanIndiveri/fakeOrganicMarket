@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 			var min = 1;
 			var cant_intentos = 3;
 			var acerto = false;
-			// var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
-			var numero_aleatorio=3;
+			var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+			// var numero_aleatorio=3;
 			var numero;
 
 			let name=document.getElementById('nombre').value;
