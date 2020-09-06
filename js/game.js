@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 btn.addEventListener("click",()=>{
 					jugar_ahora();
 					
-                    // console.log('clock');
+					// console.log('clock');
 				});
 
 		function jugar_ahora() {
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 			var min = 1;
 			var cant_intentos = 3;
 			var acerto = false;
-			var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
-			// var numero_aleatorio=3;
+			// var numero_aleatorio = Math.round(Math.random() * (max - min) + min);
+			var numero_aleatorio=3;
 			var numero;
 
 			let name=document.getElementById('nombre').value;
@@ -37,6 +37,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 								icon: 'success',
 								text: 'Congratulations you guessed the number!',
 							})
+							let audio = document.getElementById("audio");
+							audio.play();
+							document.getElementById("rdo").innerHTML=`Congratulations! <i style="color:rgb(210, 170, 92)" class="fas fa-fire"></i> <br/> The number was <b> ${numero_aleatorio}</br>`;
+
+							setTimeout(() => {
+							document.getElementById('rdo').innerHTML='';
+							document.getElementById("rdo").style.display='none';
+							}, 5000);
+							document.getElementById("rdo").style.display='block';
+
 							acerto=true;
 						}
 						else if (parseInt(numero)<numero_aleatorio){
@@ -49,9 +59,8 @@ document.addEventListener('DOMContentLoaded',()=>{
 							}
 							
 					}
-				document.getElementById("rdo").innerHTML=`Congratulations! <i style="color:rgb(210, 170, 92)" class="fas fa-fire"></i> <i style="color:rgb(210, 170, 92)" class="far fa-smile-wink"></i>  <br/> The number was <b> ${numero_aleatorio}</br>`;
-				var audio = document.getElementById("audio");
-				audio.play();
+				document.getElementById("rdo").innerHTML=`Congratulations! <i style="color:rgb(210, 170, 92)" class="fas fa-fire"></i> <br/> The number was <b> ${numero_aleatorio}</br>`;
+				
 			}
 		};
 
